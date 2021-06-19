@@ -2,6 +2,7 @@ package bitwise;
 
 public class Basic {
     public static void main(String[] args){
-        System.out.println("Hello World");
+        BitMoveOperator bmo = new BitMoveOperator();
+
     }
 }
