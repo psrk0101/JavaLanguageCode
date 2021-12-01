@@ -12,25 +12,21 @@ public class Boat {
     public int solution(int[] people, int limit){
         int answer = 0;
         Arrays.sort(people);
-        boolean[] isGrouping = new boolean[people.length];
-        for(int i = 0; i < people.length; i++){
-            int weight = 0;
-            if(!isGrouping[i]){
-                isGrouping[i] = true;
-                weight += people[i];
-                for(int j = people.length-1; j >= i; j--){
-                    if(!isGrouping[j] && people[j] + weight <= limit){
-                        isGrouping[j] = true;
-                        weight += people[j];
-                    }
-
-                    if(weight == limit){
-                        break;
-                    }
-                }
-                answer++;
+        int forward = 0;
+        int backward = people.length - 1;
+        int weight;
+        while(forward < backward){
+            weight = people[forward] + people[backward];
+            if(weight > limit){
+                backward--;
+            }else{
+                backward--;
+                forward++;
             }
+            answer++;
         }
+
+        if(forward == backward) answer++;
 
         return answer;
     }
