@@ -9,9 +9,17 @@ package programmers.two;
  *  - 아래 : 이전 앞아벳(A에서 아래쪽으로 이동하면 Z)
  *  - 왼쪽 : 커서를 왼쪽으로 이동(첫 번째 위치에서 왼쪽으로 이동하면 마지막 문자에 커서)
  *  - 오른쪽 : 커서를 오른쪽으로 이동
- *
- *
- *
  * */
 public class JoyStick {
+	public static void main(String[] args){
+
+	}
+
+	public int solution(String name){
+		int answer = 0;
+
+
+
+		return answer;
+	}
 }
