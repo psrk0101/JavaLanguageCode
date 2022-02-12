@@ -33,7 +33,7 @@ public class ReceiveReport {
         // Step 1. Init data
         Map<String, Set<String>> user_reported = new HashMap<>();
         for(String s : id_list){
-            user_reported.put(s, new HashSet());
+            user_reported.put(s, new HashSet<>());
         }
 
         // Step 2. Data Set
